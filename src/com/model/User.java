@@ -2,12 +2,15 @@ package com.model;
 
 import java.sql.Timestamp;
 
+import javax.persistence.Id;
+
 public class User {
 	
 	/**
 	 * 员工id
 	 */
-	private Long id;
+	@Id
+	private Long sid;
 	/**
 	 *用户ID
 	 */
@@ -48,11 +51,12 @@ public class User {
 	private String updateUser;
 	/**修改时间*/
 	private Timestamp updateTime;
-	public Long getId() {
-		return id;
+
+	public Long getSid() {
+		return sid;
 	}
-	public void setId(Long id) {
-		this.id = id;
+	public void setSid(Long sid) {
+		this.sid = sid;
 	}
 	public String getUserId() {
 		return userId;

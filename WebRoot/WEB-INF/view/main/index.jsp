@@ -10,7 +10,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
   <head>
    <base href="<%=basePath%>">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>郑州铁路局设备动态管理信息系统</title>
+    <title>南京华宸仓库进销存管理系统</title>
      <link href="${basePath}static/css/default.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="${basePath}static/easyui/themes/default/easyui.css">
     <link rel="stylesheet" type="text/css" href="${basePath}static/easyui/themes/icon.css">
@@ -113,17 +113,17 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 	    <img src="${basePath}static/images/loading.gif" align="absmiddle" /> 正在加载中,请稍候...</div>
 	</div>
 
-    <div region="north"  border="false" style="overflow: hidden; height: 24px;
-        background: url(${basePath}static/images/layout-browser-hd-bg.gif) #7f99be repeat-x center 50%;
-        line-height: 20px;color: #fff; font-family: Verdana, 微软雅黑,黑体">
-        <span style="float:right; padding-right:20px;" class="head">欢迎 系统管理员 <a href="#" id="editpass">修改密码</a> <a href="#" id="loginOut">安全退出</a></span>
-        <span style="padding-left:10px; font-size: 16px; "><img src="${basePath}static/images/blocks.gif" width="20" height="20" align="absmiddle" /> 郑州铁路局设备动态管理信息系统</span>
+    <div region="north"  border="false" style="overflow: hidden; height: 50px;
+        background: url(${basePath}static/images/LOGO.jpg) #7f99be repeat-x center 50%;
+         font-family: Verdana, 微软雅黑,黑体">
+        <span style="float:right; height:50px; padding-right:30px;" >欢迎 ${userName} <a href="#" id="editpass" class="easyui-linkbutton" iconCls="icon-edit" ><label style="color: black;">修改密码</label></a> <a href="#" class="easyui-linkbutton" iconCls="icon-clear" id="loginOut" ><label style="color: black;">安全退出</label></a></span>
+        <span style="padding-left:500px; font-size: 30px; "> 南京华宸仓库进销存管理系统</span>
     </div>
 <!--     #E0ECFF D2E0F2-->
     <div region="south"  style="height:24px; background: #D2E0F2;OVERFLOW-Y:hidden;" >
-        <div class="footer">Copyright 郑州铁路局设备动态管理信息系统  http://www.futongware.com Email:sales@futongware.com Tel:010-80549070</div>
+        <div class="footer">Copyright 南京华宸仓库进销存管理系统  http://www.futongware.com Email:sales@futongware.com Tel:010-80549070</div>
     </div>
-    <div region="west" split="true"  title="仓储系统导航菜单" style="width:180px;" id="west">
+    <div region="west" split="true"  title="进销存系统导航菜单" style="width:180px;" id="west">
 		<div id="nav"></div>
     </div>
     <div id="mainPanle" region="center" style="background: #eee; overflow-y:hidden">

@@ -70,12 +70,12 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</script>
 	</head>
 	
-	<body style=" background-image:url(${basePath}static/images/login_bg_default2.jpg); background-position: center top;background-repeat: no-repeat; background-color: #00416b;">
+	<body style=" background-image:url(${basePath}static/images/login_bg_default3.jpg); background-position:center;background-repeat: repeat-x">
 		
 		<!-- <marquee direction="right" ><strong style="font-family: cursive;font-size: 100px; color: graytext; ">南京华宸仓库进销存管理系统</strong></marquee> -->
 		
 		<form id="ff" action="${basePath}login" method="post">
-			<div id="mainWrapper" >
+			<div id="mainWrapper" style="padding-top: 300px;" >
 				<div class="easyui-panel" title="登陆系统"  style="padding:15px 25px;height:215px;width:400px;" 
 					 data-options="iconCls:'icon-forward',collapsible:false,minimizable:false,maximizable:false,closable:false">
 			        <table>

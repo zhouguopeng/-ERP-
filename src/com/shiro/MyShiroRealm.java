@@ -14,6 +14,8 @@ import org.apache.shiro.subject.PrincipalCollection;
 import org.apache.shiro.subject.Subject;
 import org.springframework.beans.factory.annotation.Autowired;
 
+import com.common.ConstantStr;
+import com.model.User;
 import com.octo.captcha.service.image.ImageCaptchaService;
 import com.service.UserService;
 import com.soft863.dolphin.shiro.CaptchaUsernamePasswordToken;
@@ -84,18 +86,18 @@ public class MyShiroRealm extends AuthorizingRealm {
 		// 实际上这个authcToken是从LoginController里面currentUser.login(token)传过来的
 		// 两个token的引用都是一样的,本例中是org.apache.shiro.authc.UsernamePasswordToken@33799a1e
 		UsernamePasswordToken token = (UsernamePasswordToken) authcToken;
-		AuthenticationInfo authcInfo = new SimpleAuthenticationInfo(
-				"admin", "123456", "");
-		/*User user = userService.getAdminByUserName(token.getUsername());
-		String realname = user.getRealname();
+		/*AuthenticationInfo authcInfo = new SimpleAuthenticationInfo(
+				"admin", "123456", "");*/
+		User user = userService.selectUser(token.getUsername());
+		AuthenticationInfo authcInfo = null;
 		if (null != user) {
-			AuthenticationInfo authcInfo = new SimpleAuthenticationInfo(
-					user.getUsername(), user.getPassword(), realname);
+		 authcInfo = new SimpleAuthenticationInfo(
+					user.getUserName(), user.getPassword(), "");
 			
 			this.setSession(ConstantStr.LOGIN_ID, user.getUserId());
-			this.setSession(ConstantStr.LOGIN_USER_NAME, user.getUsername());
+			this.setSession(ConstantStr.LOGIN_USER_NAME, user.getUserName());
 			return authcInfo;
-		}*/
+		}
 		return authcInfo;
 		//return null;
         //此处无需比对,比对的逻辑Shiro会做,我们只需返回一个和令牌相关的正确的验证信息  

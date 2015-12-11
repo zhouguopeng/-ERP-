@@ -3,138 +3,61 @@ package com.model;
 import java.sql.Timestamp;
 
 public class User {
+	
 	/**
-	 *  员工id
+	 * 员工id
 	 */
-	private long userId ;
+	private Long id;
 	/**
-	 *  员工登录名
+	 *用户ID
+	 */
+	private String userId ;
+	/**
+	 *员工登录名
 	 */
 	private String userName;
 	/**
-	 *  员工密码
+	 *员工密码
 	 */
 	private String password;
 	/**
-	 * 所属部门
+	 *邮箱地址
 	 */
-	private long organId ;
+	private String email ;
 	/**
 	 * 所属角色
 	 */
-	private long roleId ;
-	/**创建人*/
-	private Integer createUser;
+	private Integer roleId ;
+	/**
+	 * 仓库id
+	 */
+	private Integer whId;
+	/**
+	 * 备注
+	 */
+	private String notes;
+	/**
+	 * 状态
+	 */
+	private String status;
 	/**创建时间*/
 	private Timestamp createTime;
+	/**创建人*/
+	private String createUser;
 	/**修改人*/
-	private Integer editUser;
+	private String updateUser;
 	/**修改时间*/
-	private Integer editTime;
-	/**是否启用*/
-	private Integer isUsing;
-	/**更新回数*/
-	private Integer updCount;
-	/**用户类型*/
-	private String userType;
-	
-	/**--------------------------------扩展属性-------------------------------*/
-	/**
-	 * 所属部门信息
-	 */
-	private Organ organ;
-	/**
-	 * 所属部门名称
-	 */
-	private String organName;
-	/**
-	 * 所属角色信息
-	 */
-	private Role role;
-	/**
-	 * 所属角色名称
-	 */
-	private String roleName;
-	
-	
-	
-	public long getOrganId() {
-		return organId;
+	private Timestamp updateTime;
+	public Long getId() {
+		return id;
 	}
-	public void setOrganId(long organId) {
-		this.organId = organId;
+	public void setId(Long id) {
+		this.id = id;
 	}
-	public Integer getCreateUser() {
-		return createUser;
-	}
-	public void setCreateUser(Integer createUser) {
-		this.createUser = createUser;
-	}
-	public Timestamp getCreateTime() {
-		return createTime;
-	}
-	public void setCreateTime(Timestamp createTime) {
-		this.createTime = createTime;
-	}
-	public Integer getEditUser() {
-		return editUser;
-	}
-	public void setEditUser(Integer editUser) {
-		this.editUser = editUser;
-	}
-	public Integer getEditTime() {
-		return editTime;
-	}
-	public void setEditTime(Integer editTime) {
-		this.editTime = editTime;
-	}
-	public Integer getIsUsing() {
-		return isUsing;
-	}
-	public void setIsUsing(Integer isUsing) {
-		this.isUsing = isUsing;
-	}
-	public Integer getUpdCount() {
-		return updCount;
-	}
-	public void setUpdCount(Integer updCount) {
-		this.updCount = updCount;
-	}
-	public String getUserType() {
-		return userType;
-	}
-	public void setUserType(String userType) {
-		this.userType = userType;
-	}
-	public Organ getOrgan() {
-		return organ;
-	}
-	public void setOrgan(Organ organ) {
-		this.organ = organ;
-	}
-	public String getOrganName() {
-		return organName;
-	}
-	public void setOrganName(String organName) {
-		this.organName = organName;
-	}
-	public String getRoleName() {
-		return roleName;
-	}
-	public void setRoleName(String roleName) {
-		this.roleName = roleName;
-	}
-	
-	public Role getRole() {
-		return role;
-	}
-	public void setRole(Role role) {
-		this.role = role;
-	}
-	public long getUserId() {
+	public String getUserId() {
 		return userId;
 	}
-	public void setUserId(long userId) {
+	public void setUserId(String userId) {
 		this.userId = userId;
 	}
 	public String getUserName() {
@@ -149,13 +72,59 @@ public class User {
 	public void setPassword(String password) {
 		this.password = password;
 	}
-	
-	public long getRoleId() {
+	public String getEmail() {
+		return email;
+	}
+	public void setEmail(String email) {
+		this.email = email;
+	}
+	public Integer getRoleId() {
 		return roleId;
 	}
-	public void setRoleId(long roleId) {
+	public void setRoleId(Integer roleId) {
 		this.roleId = roleId;
 	}
-	
+	public Integer getWhId() {
+		return whId;
+	}
+	public void setWhId(Integer whId) {
+		this.whId = whId;
+	}
+	public String getNotes() {
+		return notes;
+	}
+	public void setNotes(String notes) {
+		this.notes = notes;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	public Timestamp getCreateTime() {
+		return createTime;
+	}
+	public void setCreateTime(Timestamp createTime) {
+		this.createTime = createTime;
+	}
+	public String getCreateUser() {
+		return createUser;
+	}
+	public void setCreateUser(String createUser) {
+		this.createUser = createUser;
+	}
+	public String getUpdateUser() {
+		return updateUser;
+	}
+	public void setUpdateUser(String updateUser) {
+		this.updateUser = updateUser;
+	}
+	public Timestamp getUpdateTime() {
+		return updateTime;
+	}
+	public void setUpdateTime(Timestamp updateTime) {
+		this.updateTime = updateTime;
+	}
 
 }

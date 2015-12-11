@@ -103,7 +103,7 @@ public class UserController {
 		int total = 0;
 		do{
 			User user = new User();
-			user.setUserId(1000+i);
+			//user.setUserId(1000+i);
 			user.setUserName("user" +i);
 			user.setPassword("123456");
 			
@@ -115,9 +115,9 @@ public class UserController {
 				organ.setOrganId(2);
 				organ.setOrganName("信息部");
 			}
-			user.setOrgan(organ);
+			/*//user.setOrgan(organ);
 			user.setOrganId(user.getOrgan().getOrganId());
-			user.setOrganName(user.getOrgan().getOrganName());
+			user.setOrganName(user.getOrgan().getOrganName())*/;
 			
 			Role role = new Role();
 			if(i%3 == 0){
@@ -130,9 +130,9 @@ public class UserController {
 				role.setRoleId(3);
 				role.setRoleName("一般工作人员");
 			}
-			user.setRole(role);
-			user.setRoleId(user.getRole().getRoleId());
-			user.setRoleName(user.getRole().getRoleName());
+			//user.setRole(role);
+			//user.setRoleId(user.getRole().getRoleId());
+			//user.setRoleName(user.getRole().getRoleName());
 			userList.add(user);
 			
 			i--;
@@ -144,9 +144,9 @@ public class UserController {
 		while(iterator.hasNext()){
 			User temp = iterator.next();
 			boolean flag = true;
-			if(searchUser.getOrganId() != 0 && searchUser.getOrganId() != temp.getOrganId()){
+			/*if(searchUser.getOrganId() != 0 && searchUser.getOrganId() != temp.getOrganId()){
 				flag = false;
-			}
+			}*/
 			if(searchUser.getRoleId() != 0 && searchUser.getRoleId() != temp.getRoleId()){
 				flag = false;
 			}
@@ -201,7 +201,7 @@ public class UserController {
 	public String updateUsers(User user,Map<String, Object> map,HttpServletRequest request,HttpServletResponse response) throws Exception{
 		int id=Integer.parseInt(request.getParameter("id"));
 		map.clear();
-		user.setUserId(id);
+		//user.setUserId(id);
 		// TODO:验证用户是否存在
 		// TODO:判定修改记录是否是最新
 		// TODO:保存数据和操作日志

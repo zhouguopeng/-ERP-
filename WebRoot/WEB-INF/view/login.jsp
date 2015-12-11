@@ -70,22 +70,24 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
 		</script>
 	</head>
 	
-	<body>
+	<body style=" background-image:url(${basePath}static/images/login_bg_default2.jpg); background-position: center top;background-repeat: no-repeat; background-color: #00416b;">
+		
+		<!-- <marquee direction="right" ><strong style="font-family: cursive;font-size: 100px; color: graytext; ">南京华宸仓库进销存管理系统</strong></marquee> -->
+		
 		<form id="ff" action="${basePath}login" method="post">
 			<div id="mainWrapper" >
-				<img src="${basePath}static/images/LOGO.png" />
 				<div class="easyui-panel" title="登陆系统"  style="padding:15px 25px;height:215px;width:400px;" 
 					 data-options="iconCls:'icon-forward',collapsible:false,minimizable:false,maximizable:false,closable:false">
 			        <table>
 			            	<tr>
 			            		<td>用户名：</td>
 			            		<td>
-			            			<input type="text" id="username" name="username"  class="easyui-textbox" required="true" />
+			            			<input type="text" id="username" name="username" value="SH00101"  class="easyui-textbox" required="true" />
 			            		</td>
 			            	</tr>
 			            	<tr>
 			            		<td>密&nbsp;&nbsp;&nbsp;&nbsp;码：</td>
-			            		<td><input type="password" id="password" name="password" class="easyui-textbox" required="true" /></td>
+			            		<td><input type="password" id="password" name="password" value="hive1234" class="easyui-textbox" required="true" /></td>
 			            	</tr>
 			            	<tr>
 			            		<td>验证码：</td>

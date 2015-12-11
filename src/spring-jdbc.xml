@@ -16,7 +16,7 @@
 	   http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd">
 	 <!-- 配置数据源 -->
     <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-        destroy-method="close">
+        >
         <property name="driverClass">
             <value>${jdbc.driverClassName}</value>
         </property>
@@ -69,14 +69,17 @@
         </property>
         <!--因性能消耗大请只在需要的时候使用它。如果设为true那么在每个connection提交的 时候都将校验其有效性。建议使用idleConnectionTestPeriod或automaticTestTable
             等方法来提升连接测试的性能。Default: false -->
-        <property name="testConnectionOnCheckout">
+        <!-- <property name="testConnectionOnCheckout">
             <value>false</value>
-        </property>
+        </property> -->
     </bean>
  
     <!-- 配置Jdbc模板 -->
     <bean id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate">
         <property name="dataSource" ref="dataSource"></property>
+    </bean>
+    <bean id="jdbcTemplateTool" class="org.crazycake.jdbcTemplateTool.JdbcTemplateTool">
+        <property name = "jdbcTemplate" ref="jdbcTemplate" />
     </bean>
  
     <!-- 配置事务管理器 -->

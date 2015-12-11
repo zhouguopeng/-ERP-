@@ -84,7 +84,7 @@
   		<property name="order" value="1"/>
   		<property name="location" value="classpath:views.xml"/>
 	</bean>
-    
+    <bean class="com.util.SpringContextUtil"></bean>
    <!--  <bean id="dynamicBeanReader" class="com.service.implement.DynamicBeanReaderImpl" init-method="init">  </bean> -->  
   <!--   <bean id="dynamicdatasource" class="com.common.DynamicDataSource">  
         <property name="targetDataSources">  
